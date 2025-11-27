@@ -1,1 +1,2 @@
-# codewars
+## Codewars KATA exercises 
+
