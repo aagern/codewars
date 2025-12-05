@@ -1,3 +1,4 @@
+use itertools::Itertools;
 use std::collections::HashMap;
 fn count_duplicates(text: &str) -> u32 {
     let mut accum: u32 = 0;
@@ -17,6 +18,16 @@ fn count_duplicates(text: &str) -> u32 {
     accum
 }
 
+fn count_duplicates2(text: &str) -> u32 {
+    text.to_lowercase()
+        .chars()
+        .counts() // replaces symbol_count in fn above
+        .values() // receives HashMap and returns its' values
+        .filter(|&&i| i > 1) // filters values > 1
+        .count() as u32
+}
+
 fn main() {
     println!("{}", count_duplicates("aabBcde"));
+    println!("{}", count_duplicates2("aabBcde"));
 }
