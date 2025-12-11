@@ -11,4 +11,8 @@ fn rot13(message: &str) -> String {
 
 fn main() {
     println!("{}", rot13("Test")); // Grfg
+
+    println!("{}", 'a' as u8);
+    println!("{}", 97 as char);
+    println!("{:?}", std::char::from_u32(98).unwrap());
 }
