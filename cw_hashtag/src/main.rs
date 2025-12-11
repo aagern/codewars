@@ -13,8 +13,8 @@ pub fn generate_hashtag2(s: &str) -> Option<String> {
 
 #[allow(unused)]
 fn capitalize(s: &str) -> String {
-    let mut s = s.to_lowercase();
-    s[0..1].to_lowercase();
+    let mut s = s.to_ascii_lowercase();
+    s[0..1].make_ascii_uppercase();
     s
 }
 
